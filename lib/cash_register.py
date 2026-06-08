@@ -21,5 +21,12 @@ class CashRegister:
       self._discount = 0
 
 #method1 add_item      
-
+def add_item(self, item, price, quantity=1):
+    self.total += price * quantity
+    self.items.append(item)
+    self.previous_transaction.append({
+      "item": item,
+      "price": price,
+      "quantity": quantity
+    })
   pass
