@@ -36,5 +36,14 @@ def apply_discount(self):
     else:
       last=self.previous_transaction.pop()
       self.total -= last["price"] * last["quantity"]
-      self.items.remove(last["item"]) 
+      self.items.remove(last["item"])
+
+#method3 void_last_transaction
+def void_last_transaction(self):
+    if len(self.previous_transaction) == 0:
+      print(" No transaction to void.")
+    else:
+        last=self.previous_transaction.pop()
+        self.total -= last["price"] * last["quantity"]
+        self.items.remove(last["item"])           
   pass
