@@ -7,4 +7,19 @@ class CashRegister:
     self.items = []
     self.previous_transaction = []
 
+#property discount
+  @property
+  def discount(self):
+    return self._discount
+
+  @discount.setter
+  def discount(self, value):
+    if isinstance(value, int) and 0 <= value <= 100:
+      self._discount = value
+    else:
+      print("Not valid discount")
+      self._discount = 0
+
+#method1 add_item      
+
   pass
