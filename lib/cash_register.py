@@ -29,4 +29,12 @@ def add_item(self, item, price, quantity=1):
       "price": price,
       "quantity": quantity
     })
+#method2 apply_discount
+def apply_discount(self):
+    if len(self.previous_transaction) == 0:
+      print("There is no discount to apply.")
+    else:
+      last=self.previous_transaction.pop()
+      self.total -= last["price"] * last["quantity"]
+      self.items.remove(last["item"]) 
   pass
